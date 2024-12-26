@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %>></title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  
+  <style>
+    .container {
+      max-width: 500px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 class="text-center">BMI Calculator</h2>
+    <form action="/result" method="POST">
+      <select class="form-control" id="units" name="units">
+        <option value="metric">Metric</option>
+        <option value="imperial">Imperial</option>
+      </select>
+
+      <div class="form-group">
+        <label for="height">Height (in <span id="heightUnit">cm</span>)</label>
+        <input type="number" class="form-control" name="height" id="height" required>
+      </div>
+
+      <div class="form-group">
+        <label for="weight">Weight (in <span id="weightUnit">kg</span>)</label>
+        <input type="number" class="form-control" name="weight" id="weight" required>
+      </div>
+
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <select class="form-control" id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+
+      <button type="submit" class="btn btn-primary btn-block">Calculate BMI</button>
+    </form>
+
+    <h3 class="mt-4" id="result"></h3>
+  </div>
+
+  <script src="scripts/unitHandling.js"></script>
+</body>
+</html>
