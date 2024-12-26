@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/result.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="weight">
+      <div class="w"><h4>Your weight</h4><p><%=weight%></p></div>
+      <div class="w"><h4>Perfect weight</h4><p><%=perfect%></p></div>
+    </div>
+
+    <h1 class="text-center" id = 'mes'><%= message %></h2>
+    <h1 class="text-center"><%= bmi %></h1>
+    <a href="/">Go home</a>
+    <script src="./scripts/result.js"></script>
+  </div>
+</body>
+</html>
